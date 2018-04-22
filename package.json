@@ -1,0 +1,43 @@
+{
+  "name": "@joejukan/argumenter",
+  "version": "0.0.0",
+  "description": "A tool that parses function arguments into primitives, objects, arrays and functions.",
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "clean": "rm -rf lib/*",
+    "build": "tsc",
+    "test": "./node_modules/.bin/jasmine-ts",
+    "preversion": "npm run clean && npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish",
+    "patch": "npm version patch -m \"[PATCH] version (%s)\"",
+    "minor": "npm version minor -m \"[MINOR] version (%s)\"",
+    "major": "npm version major -m \"[MAJOR] version (%s)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joejukan/argumenter.git"
+  },
+  "keywords": [
+    "Argumenter",
+    "Arguments",
+    "Function",
+    "Functional",
+    "Overloading",
+    "Overloads",
+    "Parsing",
+    "Typescript"
+  ],
+  "author": "Joseph Eniojukan <jeniojukan@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joejukan/argumenter/issues"
+  },
+  "homepage": "https://github.com/joejukan/argumenter#readme",
+  "devDependencies": {
+    "@types/jasmine": "2.8.6",
+    "jasmine-ts": "0.2.1",
+    "jasmine-spec-reporter": "4.2.1"
+  }
+}
