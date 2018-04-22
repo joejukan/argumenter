@@ -10,7 +10,7 @@ Making it very useful when exposing functions as **TypeScript** overloads.<br/><
 ## Usage
 The **Argumenter** class is used within function implementations to parse input arguments.<br/>
 ```typescript
-import { Argumenter } from "argumenter";
+import { Argumenter } from "@joejukan/argumenter";
 export function someFunc(...args){
     let a = new Argumenter(args);
 }
