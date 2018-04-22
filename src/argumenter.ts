@@ -44,7 +44,7 @@ export class Argumenter {
         return this.getNative('array');
     }
 
-    public instance<T>(type: { new (): T }): T {
+    public instance<T>(type: { new (...args): T }): T {
         let args = this.args;
         let result;
         let remove = -1;
