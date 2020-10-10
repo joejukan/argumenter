@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [1.0.5] - 2020-10-10
+* Change unit test framework to `jest`.
+
 ## [1.0.4] - 2020-10-10
 * Fixed [Issue #2](https://github.com/joejukan/argumenter/issues/2) Argumenter Detecting Non Array Object as Array.<br/><br/>
 * Added unit tests covering detecting non-array object as an array.

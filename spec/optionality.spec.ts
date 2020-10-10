@@ -1,7 +1,7 @@
 import {Argumenter} from '../src';
 
 describe(`Argument Optionality Tests`, () => {
-    it(`Execute method with two optional arguments (string and/or number)`, done => {
+    test(`Execute method with two optional arguments (string and/or number)`, () => {
         let method = function(...args){
             let arg = new Argumenter(args);
             switch(args.length){
@@ -11,11 +11,10 @@ describe(`Argument Optionality Tests`, () => {
                 default: return false;
             }
         }
-        expect(method()).toBeTruthy(`The overload function() was not successful`);
-        expect(method('John')).toBeTruthy(`The overload function(string) was not successful`);
-        expect(method(35)).toBeTruthy(`The overload function(number) was not successful`);
-        expect(method('John', 35)).toBeTruthy(`The overload function(string, number) was not successful`);
-        expect(method(35, 'John')).toBeTruthy(`The overload function(string, number) was not successful`);
-        done();
+        expect(method()).toBeTruthy();
+        expect(method('John')).toBeTruthy();
+        expect(method(35)).toBeTruthy();
+        expect(method('John', 35)).toBeTruthy();
+        expect(method(35, 'John')).toBeTruthy();
     });
 });
