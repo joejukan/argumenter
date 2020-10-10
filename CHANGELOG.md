@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.<br/>
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).<br/><br/>
 
+## [1.0.4] - 2020-10-10
+* Fixed [Issue #2](https://github.com/joejukan/argumenter/issues/2) Argumenter Detecting Non Array Object as Array.<br/><br/>
+* Added unit tests covering detecting non-array object as an array.
+* Upraded `jasmine` module version `3.6.1`.
+* Upraded `jasmine-ts` module version `0.3.0`.
+
 ## [1.0.3] - 2018-04-22
 * Fixed [Issue #1](https://github.com/joejukan/argumenter/issues/1) Instance Function does not Support Constructors with Arguments.<br/><br/>
 

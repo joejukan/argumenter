@@ -64,8 +64,12 @@ export class Argumenter {
     }
     private screenArray(type: string, arg: any, arrayed: boolean) {
         if (type === 'object') {
-            if (Array.isArray(arg))
+            if (Array.isArray(arg)){
                 return arrayed;
+            } else {
+                return !arrayed;
+            }
+                
         }
 
         return true;

@@ -34,4 +34,18 @@ describe(`Functional Overload Tests`, () => {
         expect(method('John', {name: 'John', age: 35})).toBeTruthy(`The overload function(string, object) was not successful`);
         done();
     });
+
+    it(`Overload method with two arguments (object and array)`, done => {
+        let method = function(...args) {
+            const a = new Argumenter(args);
+            const { array } = a;
+            const { object } = a;
+            return Array.isArray(array) && object && !Array.isArray(object);
+        }
+        const array = [10, 20];
+        const object = { age: 20 };
+        expect(method(array, object)).toBeTrue();
+        expect(method(object, array)).toBeTrue();
+        done();
+    });
 });
