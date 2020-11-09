@@ -44,4 +44,18 @@ describe(`Functional Overload Tests`, () => {
         expect(method(array, object)).toBeTruthy();
         expect(method(object, array)).toBeTruthy();
     });
+
+    test(`Overload method with thre arguments (number, string and symbol)`, () => {
+        let method = function(...args) {
+            const a = new Argumenter(args);
+            const { object } = a;
+            const { symbol } = a;
+            expect(object).toBeFalsy();
+            expect(symbol).toBeDefined();
+            expect(typeof symbol === 'symbol').toBeTruthy();
+            expect(symbol.toString() === Symbol('Age').toString())
+        }
+        const symbol = Symbol('Age');
+        method('Name', 40, symbol);
+    });
 });

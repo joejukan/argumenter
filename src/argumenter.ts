@@ -24,6 +24,10 @@ export class Argumenter {
         return this.getNative('boolean');
     }
 
+    public get symbol(): symbol {
+        return this.getNative('symbol');
+    }
+
     public get nil(): null{
         return this.getNative('null');
     }
